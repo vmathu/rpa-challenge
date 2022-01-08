@@ -5662,3 +5662,114 @@ INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><t
 INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/027/027-999991250'
 INFO:RobotFramework:Clicking element '//*[@href="#"]'.
 INFO:RPA.FileSystem:Moved file: C:\Users\asus\Downloads\027-999991250.pdf -> c:\Users\asus\Downloads\IT_Dashboard_RPA_Challenge-master\IT_Dashboard_RPA_Challenge-master\output\027-999991250.pdf
+INFO:RobotFramework:Clicking element '//*[@href="#home-dive-in"]'.
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393'
+INFO:RobotFramework:Clicking element '//select[@class="form-control c-select"]/option[4]'.
+INFO:RPA.Excel.Files:Opened workbook: <RPA.Excel.Files.XlsxWorkbook object at 0x0000021E19BE6408>
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000086'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.
+INFO:RobotFramework:Clicking element '//*[@href="#home-dive-in"]'.
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393'
+INFO:RobotFramework:Clicking element '//select[@class="form-control c-select"]/option[4]'.
+INFO:RPA.Excel.Files:Opened workbook: <RPA.Excel.Files.XlsxWorkbook object at 0x000002030DF60848>
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000086'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.
+INFO:RPA.FileSystem:Moved file: C:\Users\asus\Downloads\393-000000086.pdf -> c:\Users\asus\Downloads\IT_Dashboard_RPA_Challenge-master\output\393-000000086.pdf
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000087'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.
+INFO:RPA.FileSystem:Moved file: C:\Users\asus\Downloads\393-000000087.pdf -> c:\Users\asus\Downloads\IT_Dashboard_RPA_Challenge-master\output\393-000000087.pdf
+INFO:RobotFramework:Clicking element '//*[@href="#home-dive-in"]'.
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393'
+INFO:RobotFramework:Clicking element '//select[@class="form-control c-select"]/option[4]'.
+INFO:RPA.Excel.Files:Opened workbook: <RPA.Excel.Files.XlsxWorkbook object at 0x000002126884E388>
+INFO:RPA.Browser.Selenium:Download directory set to: c:\Users\asus\Downloads\IT_Dashboard_RPA_Challenge-master\output
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000086'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000087'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.
+INFO:RobotFramework:Clicking element '//*[@href="#home-dive-in"]'.
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393'
+INFO:RobotFramework:Clicking element '//select[@class="form-control c-select"]/option[4]'.
+INFO:RPA.Excel.Files:Opened workbook: <RPA.Excel.Files.XlsxWorkbook object at 0x00000157219007C8>
+INFO:RPA.Browser.Selenium:Download directory set to: d:\benit\IT_Dashboard_RPA_Challenge-master\output
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000086'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:webdrivermanager.misc:Created download root directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:webdrivermanager.misc:Created symlink directory: C:\Users\asus\AppData\Local\robocorp\webdrivers
+INFO:RobotFramework:Creating an instance of the Chrome WebDriver.
+INFO:RPA.Browser.Selenium:Created Chrome browser with arguments: --disable-dev-shm-usage --disable-web-security --allow-running-insecure-content --no-sandbox
+INFO:RobotFramework:<p>Attempted combinations:</p><div class="doc"><table><tr><th>Browser</th><th>Download</th><th>Error</th></tr><tr><td>Chrome</td><td>False</td><td>Message: 'chromedriver' executable needs to be in PATH. Please see https://sites.google.com/a/chromium.org/chromedriver/home
+</td></tr><tr><td>Chrome</td><td>True</td><td></td></tr></table></div>
+INFO:RobotFramework:Opening url 'https://itdashboard.gov/drupal/summary/393/393-000000087'
+INFO:RobotFramework:Clicking element '//*[@href="#"]'.

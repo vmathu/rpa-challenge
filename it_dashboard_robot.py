@@ -17,17 +17,18 @@ class ITDashboardRobot:
         self.list_parser = AgenciesListParser()
         logfile = f'{self.output_folder}/log_file.log'
         logging.basicConfig(level=logging.INFO, filename=logfile)
-        self.user_director = os.path.expanduser('~')
 
     def run(self):
-        #Get agencies
+        # Get agencies
         self.list_parser.click_dive_in_button()
         self.list_parser.get_information()
-        #Get individual investments
-        agency_link = self.list_parser.get_agency_link()
+        # Get individual investments
+        agency_link = self.list_parser.get_agency_link(23)
         self.detail_parser = IndividualInvestmentsParser(agency_link)
         details = self.detail_parser.parse()
-        #Download PDF
+        # Download PDF
+        dir = f'{os.getcwd()}/output'
+        self.browser.set_download_directory(dir, True)
         links = [detail['link'] for detail in details]
         names = [detail['UII'] for detail in details]
 
@@ -35,13 +36,11 @@ class ITDashboardRobot:
         for link in links:
             if link != '':
                 self.browser.open_available_browser(link)
-                #Click to download
+                # Click to download
                 self.browser.wait_until_element_is_visible('//*[@href="#"]')
                 self.browser.click_element('//*[@href="#"]')
-                #Wait for completed downloads
-                while self.lib.does_file_not_exist('{}/Downloads/{}.pdf'.format(self.user_director, names[num])):
+                # Wait for completed downloads
+                while self.lib.does_file_not_exist(
+                        '{}/{}.pdf'.format(dir, names[num])):
                     continue     
-                else: 
-                    #Move file from default download folder to ./output
-                    self.lib.move_file('{}/Downloads/{}.pdf'.format(self.user_director, names[num]), '{}/output/{}.pdf'.format(os.getcwd(), names[num]), True)
             num += 1

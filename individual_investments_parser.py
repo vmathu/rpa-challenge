@@ -29,12 +29,18 @@ class IndividualInvestmentsParser:
             locator='//div[@class="dataTables_scrollHead"]/div/table/thead/tr[2]/th',
             timeout=datetime.timedelta(seconds=60)
         )
-        headers = self.browser.get_webelements(locator='//div[@class="dataTables_scrollHead"]/div/table/thead/tr[2]/th')
+        headers = self.browser.get_webelements(
+            locator='//div[@class="dataTables_scrollHead"]/div/table/thead/tr[2]/th'
+        )
         return [header.text for header in headers]
 
     def _get_table_rows(self):
-        self.browser.wait_until_element_is_enabled(locator='//table[@id="investments-table-object"]/tbody/tr')
-        return self.browser.get_webelements(locator='//table[@id="investments-table-object"]/tbody/tr')
+        self.browser.wait_until_element_is_enabled(
+            locator='//table[@id="investments-table-object"]/tbody/tr'
+        )
+        return self.browser.get_webelements(
+            locator='//table[@id="investments-table-object"]/tbody/tr'
+        )
 
     def _get_row_cells(self, table_row):
         return self.browser.get_webelements(locator=[table_row, 'css:td'])
@@ -67,7 +73,10 @@ class IndividualInvestmentsParser:
                 if num == 0:
                     count_a = self.browser.get_element_count(locator=[cell, 'css:a'])
                     if count_a > 0:
-                        investment["link"] = self.browser.get_element_attribute(locator=[cell, 'css:a'], attribute='href')
+                        investment["link"] = self.browser.get_element_attribute(
+                            locator=[cell, 'css:a'], 
+                            attribute='href'
+                        )
                     else:
                         investment["link"] = ''
                 investment[headers[num]] = cell.text
