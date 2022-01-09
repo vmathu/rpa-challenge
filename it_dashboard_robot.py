@@ -23,11 +23,11 @@ class ITDashboardRobot:
         self.list_parser.click_dive_in_button()
         self.list_parser.get_information()
         # Get individual investments
-        agency_link = self.list_parser.get_agency_link(23)
+        agency_link = self.list_parser.get_agency_link(16)
         self.detail_parser = IndividualInvestmentsParser(agency_link)
         details = self.detail_parser.parse()
         # Download PDF
-        dir = f'{os.getcwd()}/output'
+        dir = f'{os.getcwd()}/{self.output_folder}'
         self.browser.set_download_directory(dir, True)
         links = [detail['link'] for detail in details]
         names = [detail['UII'] for detail in details]
@@ -42,5 +42,5 @@ class ITDashboardRobot:
                 # Wait for completed downloads
                 while self.lib.does_file_not_exist(
                         '{}/{}.pdf'.format(dir, names[num])):
-                    continue     
+                    continue
             num += 1
