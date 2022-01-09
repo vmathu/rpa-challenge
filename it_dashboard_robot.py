@@ -23,7 +23,7 @@ class ITDashboardRobot:
         self.list_parser.click_dive_in_button()
         self.list_parser.get_information()
         # Get individual investments
-        agency_link = self.list_parser.get_agency_link(16)
+        agency_link = self.list_parser.get_agency_link(21)
         self.detail_parser = IndividualInvestmentsParser(agency_link)
         details = self.detail_parser.parse()
         # Download PDF
