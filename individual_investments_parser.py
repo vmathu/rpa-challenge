@@ -1,6 +1,10 @@
 import datetime
 from RPA.Browser.Selenium import Selenium
 from RPA.Excel.Files import Files
+# Critical: Don't import Excel everywhere. It defeat the purpose of using class and encapsulation. You should create an Excel writer (with methods for 
+# writing different files) and then import that class in here.
+
+# Medium: Your naming convention is really inconsistent, please unify them by whether or not to put a _ at the start of methods names
 
 
 class IndividualInvestmentsParser:
