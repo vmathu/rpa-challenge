@@ -32,7 +32,7 @@ class ITDashboardRobot:
         links = [detail['link'] for detail in details]
         names = [detail['UII'] for detail in details]
 
-        num=0
+        num = 0
         for link in links:
             if link != '':
                 self.browser.open_available_browser(link)

@@ -47,7 +47,7 @@ class AgenciesListParser:
         agencies = self.get_agencies()
         self.excel.create_workbook("output/Agencies.xlsx")
         self.excel.rename_worksheet("Sheet", "Agencies")
-        row=1
+        row = 1
         for agency in agencies:
             name = self._get_name(agency).text
             spending = self._get_spending(agency).text
@@ -57,7 +57,7 @@ class AgenciesListParser:
             self.excel.set_cell_value(row, "A", spending)
             row += 1
         self.excel.save_workbook()
-    
+
     def get_agency_link(self, id):
-        agency = self.get_agencies()[id]
-        return agency.find_element_by_class_name('btn-sm').get_attribute('href')
+        agency = self.get_agencies()[id].find_element_by_class_name('btn-sm')
+        return agency.get_attribute('href')
