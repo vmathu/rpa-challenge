@@ -1,6 +1,9 @@
 import datetime
+from os import path
+
 from RPA.Browser.Selenium import Selenium
-from RPA.Excel.Files import Files
+
+from utils import XlsxSaver
 
 
 class IndividualInvestmentsParser:
@@ -8,7 +11,6 @@ class IndividualInvestmentsParser:
     def __init__(self, agency_link):
         self.browser = Selenium()
         self.browser.open_available_browser(agency_link)
-        self.excel = Files()
 
     def _get_investments_table(self):
         self.browser.wait_until_element_is_visible(
@@ -22,18 +24,10 @@ class IndividualInvestmentsParser:
             locator='//a[@class="paginate_button last disabled"]',
             timeout=datetime.timedelta(seconds=60)
         )
-        self.browser.get_webelement(
-            locator='//*[@id="investments-table-widget"]'
-        )
 
     def _get_table_headers(self):
-        self.browser.wait_until_element_is_visible(
-            locator='//*[@class="dataTables_scrollHead"]/div/table/thead/tr[2]/th',
-            timeout=datetime.timedelta(seconds=60)
-        )
         headers = self.browser.get_webelements(
-            locator='//*[@class="dataTables_scrollHead"]/div/table/thead/tr[2]/th'
-        )
+            '//*[@class="dataTables_scrollHead"]/div/table/thead/tr[2]/th')
         return [header.text for header in headers]
 
     def _get_table_rows(self):
@@ -47,17 +41,16 @@ class IndividualInvestmentsParser:
     def _get_row_cells(self, table_row):
         return self.browser.get_webelements(locator=[table_row, 'css:td'])
 
-    def save_investments_table(self, headers, investments):
-        self.excel.open_workbook('output/Agencies.xlsx')
-        self.excel.create_worksheet('Individual Investments')
-        col = 2
-        for header in headers:
-            self.excel.set_cell_value(1, col, header)
-            col += 1
-        self.excel.append_rows_to_worksheet(investments)
-        self.excel.save_workbook()
+    def _save_investments_table(self, headers, investments):
+        helper = XlsxSaver(
+            path='output/Agencies.xlsx',
+            worksheet='Individual Investments'
+        )
+        helper._fill_headers(2, headers)
+        helper._fill_rows(investments)
+        helper._save_workbook()
 
-    def parse(self):
+    def _get_investments(self):
         self._get_investments_table()
         headers = self._get_table_headers()
         rows = self._get_table_rows()
@@ -85,5 +78,5 @@ class IndividualInvestmentsParser:
                 investment[headers[num]] = cell.text
                 num += 1
             investments.append(investment)
-        self.save_investments_table(headers, investments)
+        self._save_investments_table(headers, investments)
         return investments

@@ -1,31 +1,26 @@
 from RPA.Browser.Selenium import Selenium
-from RPA.Excel.Files import Files
+
+from utils import XlsxSaver
 
 
 class AgenciesListParser:
-    URL = "https://itdashboard.gov"
 
-    array = []
-
-    def __init__(self):
+    def __init__(self, url):
         self.browser = Selenium()
-        self.browser.open_available_browser(self.URL)
-        self.excel = Files()
+        self.browser.open_available_browser(url)
 
-    def click_dive_in_button(self):
+    def _click_dive_in_button(self):
         self.browser.wait_until_element_is_visible(
             '//*[@href="#home-dive-in"]'
         )
         self.browser.click_element('//*[@href="#home-dive-in"]')
 
-    def get_agencies(self):
+    def _get_agencies(self):
         self.browser.wait_until_element_is_visible(
             '//*[@id="agency-tiles-container"]'
         )
-        container = self.browser.find_element(
-            '//*[@id="agency-tiles-container"]'
-        )
-        return container.find_elements_by_class_name('noUnderline')
+        return self.browser.get_webelements(
+            '//*[@id="agency-tiles-container"]/div/div/div/div')
 
     def _get_name(self, agency):
         self.browser.wait_until_element_is_visible(
@@ -43,21 +38,22 @@ class AgenciesListParser:
             locator=[agency, 'css:span:nth-of-type(2)']
         )
 
-    def get_information(self):
-        agencies = self.get_agencies()
-        self.excel.create_workbook("output/Agencies.xlsx")
-        self.excel.rename_worksheet("Sheet", "Agencies")
+    def _get_information(self):
+        agencies = self._get_agencies()
+        helper = XlsxSaver(
+            worksheet='Agencies',
+            path='output/Agencies.xlsx'
+        )
         row = 1
         for agency in agencies:
-            name = self._get_name(agency).text
             spending = self._get_spending(agency).text
-            self.array.append(
-                {"name": name, "spending": spending}
-            )
-            self.excel.set_cell_value(row, "A", spending)
+            helper._fill_row(row, "A", spending)
             row += 1
-        self.excel.save_workbook()
+        helper._save_workbook()
 
-    def get_agency_link(self, id):
-        agency = self.get_agencies()[id].find_element_by_class_name('btn-sm')
-        return agency.get_attribute('href')
+    def _get_agency_link(self, id):
+        agency = self._get_agencies()[id]
+        link = self.browser.get_webelement(
+            locator=[agency, 'css:div>div>div>a']
+        )
+        return link.get_attribute('href')
