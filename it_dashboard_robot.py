@@ -27,6 +27,7 @@ class ITDashboardRobot:
         self.detail_parser = IndividualInvestmentsParser(agency_link)
         details = self.detail_parser.parse()
         # Download PDF
+        # Critical: Please move pdf download into its own class
         dir = f'{os.getcwd()}/{self.output_folder}'
         self.browser.set_download_directory(dir, True)
         links = [detail['link'] for detail in details]
@@ -37,9 +38,12 @@ class ITDashboardRobot:
             if link != '':
                 self.browser.open_available_browser(link)
                 # Click to download
+                # Critical: Href="#" can be of any button/link element, this is not very efficient, please use a better query
                 self.browser.wait_until_element_is_visible('//*[@href="#"]')
+                # Low: maybe use click link which can be a better choice here
                 self.browser.click_element('//*[@href="#"]')
                 # Wait for completed downloads
+                # Critical: this while loop here is very bad. It can potentially be a blocking thread if the file can never be download. You will need a timeout 
                 while self.lib.does_file_not_exist(
                         '{}/{}.pdf'.format(dir, names[num])):
                     continue
